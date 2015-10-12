@@ -32,6 +32,6 @@ THE SOFTWARE.
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <View:ClientView/>
+    <View:ClientView x:Name="clientView"/>
 
 </Page>

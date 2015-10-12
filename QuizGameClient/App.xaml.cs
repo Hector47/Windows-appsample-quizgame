@@ -22,6 +22,7 @@
 //  THE SOFTWARE.
 //  ---------------------------------------------------------------------------------
 
+using QuizGame.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -48,6 +49,10 @@ namespace QuizGameClient
     /// </summary>
     sealed partial class App : Application
     {
+        private static ViewModelLocator viewModelLocator = new ViewModelLocator();
+
+        public static ClientViewModel ClientViewModel { get { return App.viewModelLocator.ClientViewModel; } }
+        
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().

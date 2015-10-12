@@ -49,6 +49,13 @@ namespace QuizGameClient
         public MainPage()
         {
             this.InitializeComponent();
+            this.Loading += MainPage_Loading;
         }
+
+        private void MainPage_Loading(FrameworkElement sender, object args)
+        {
+            this.clientView.ViewModel = App.ClientViewModel;
+        }
+                
     }
 }
